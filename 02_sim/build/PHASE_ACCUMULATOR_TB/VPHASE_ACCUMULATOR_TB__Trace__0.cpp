@@ -40,10 +40,10 @@ void VPHASE_ACCUMULATOR_TB___024root__trace_chg_0_sub_0(VPHASE_ACCUMULATOR_TB___
     }
     bufp->chgBit(oldp+10,(vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_CLK));
     bufp->chgBit(oldp+11,(((IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter) 
-                           == (0xffffU & ((IData)(0x4e20U) 
+                           >= (0xffffU & ((IData)(0x4e20U) 
                                           - (IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_FREQ_DELTA))))));
     bufp->chgBit(oldp+12,(((IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter) 
-                           == (IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_FREQ_DELTA))));
+                           <= (IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_FREQ_DELTA))));
     bufp->chgCData(oldp+13,(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_next_state),4);
 }
 

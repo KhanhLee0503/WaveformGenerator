@@ -8,13 +8,13 @@
                                                                                               : ... note: In instance 'PHASE_ACCUMULATOR_TB.dut'
    61 |     2'b10: r_phase_counter <= r_phase_counter - I_FREQ_DELTA;
       |                            ^~
-%Warning-WIDTHEXPAND: /mnt/c/SystemVerilog/Waveform_Generator/00_src/PHASE_ACCUMULATOR.sv:68:45: Operator EQ expects 16 bits on the LHS, but LHS's VARREF 'r_phase_counter' generates 15 bits.
+%Warning-WIDTHEXPAND: /mnt/c/SystemVerilog/Waveform_Generator/00_src/PHASE_ACCUMULATOR.sv:68:45: Operator GTE expects 16 bits on the LHS, but LHS's VARREF 'r_phase_counter' generates 15 bits.
                                                                                                : ... note: In instance 'PHASE_ACCUMULATOR_TB.dut'
-   68 | assign w_phase_overflow  = (r_phase_counter == (15'h4E20 - I_FREQ_DELTA));
+   68 | assign w_phase_overflow  = (r_phase_counter >= (15'h4E20 - I_FREQ_DELTA));
       |                                             ^~
-%Warning-WIDTHEXPAND: /mnt/c/SystemVerilog/Waveform_Generator/00_src/PHASE_ACCUMULATOR.sv:69:45: Operator EQ expects 16 bits on the LHS, but LHS's VARREF 'r_phase_counter' generates 15 bits.
+%Warning-WIDTHEXPAND: /mnt/c/SystemVerilog/Waveform_Generator/00_src/PHASE_ACCUMULATOR.sv:69:45: Operator LTE expects 16 bits on the LHS, but LHS's VARREF 'r_phase_counter' generates 15 bits.
                                                                                                : ... note: In instance 'PHASE_ACCUMULATOR_TB.dut'
-   69 | assign w_phase_underflow = (r_phase_counter == (RESET_NUMBER + I_FREQ_DELTA));
+   69 | assign w_phase_underflow = (r_phase_counter <= (RESET_NUMBER + I_FREQ_DELTA));
       |                                             ^~
 %Warning-WIDTHTRUNC: ../01_tb/PHASE_ACCUMULATOR_TB.sv:145:5: Operator TASKREF 'check_counter' expects 15 bits on the Function Argument, but Function Argument's MULS generates 32 bits.
                                                            : ... note: In instance 'PHASE_ACCUMULATOR_TB'

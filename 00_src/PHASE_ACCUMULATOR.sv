@@ -65,8 +65,8 @@ always_ff @(posedge I_CLK or negedge I_RESET_N) begin
   end
 end
 
-assign w_phase_overflow  = (r_phase_counter == (15'h4E20 - I_FREQ_DELTA));
-assign w_phase_underflow = (r_phase_counter == (RESET_NUMBER + I_FREQ_DELTA));
+assign w_phase_overflow  = (r_phase_counter >= (15'h4E20 - I_FREQ_DELTA));
+assign w_phase_underflow = (r_phase_counter <= (RESET_NUMBER + I_FREQ_DELTA));
 
 //=============================================================
 //                   PHASE FSM CONTROLLER

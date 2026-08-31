@@ -140,9 +140,9 @@ VL_ATTR_COLD void VPHASE_ACCUMULATOR_TB___024root__trace_full_0_sub_0(VPHASE_ACC
     bufp->fullBit(oldp+10,(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__w_phase_down));
     bufp->fullBit(oldp+11,(vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_CLK));
     bufp->fullBit(oldp+12,(((IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter) 
-                            == (0xffffU & ((IData)(0x4e20U) 
+                            >= (0xffffU & ((IData)(0x4e20U) 
                                            - (IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_FREQ_DELTA))))));
     bufp->fullBit(oldp+13,(((IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter) 
-                            == (IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_FREQ_DELTA))));
+                            <= (IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_FREQ_DELTA))));
     bufp->fullCData(oldp+14,(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_next_state),4);
 }

@@ -81,9 +81,9 @@ VL_ATTR_COLD void VPHASE_ACCUMULATOR_TB___024root___stl_sequent__TOP__0(VPHASE_A
     // Body
     __Vtableidx1 = (((IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_START) 
                      << 8U) | ((((IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter) 
-                                 == (IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_FREQ_DELTA)) 
+                                 <= (IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_FREQ_DELTA)) 
                                 << 7U) | ((((IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter) 
-                                            == (0xffffU 
+                                            >= (0xffffU 
                                                 & ((IData)(0x4e20U) 
                                                    - (IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_FREQ_DELTA)))) 
                                            << 6U) | 
