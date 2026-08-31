@@ -1,0 +1,60 @@
+%Warning-WIDTHTRUNC: /mnt/c/SystemVerilog/Waveform_Generator/00_src/PHASE_ACCUMULATOR.sv:60:28: Operator ASSIGNDLY expects 15 bits on the Assign RHS, but Assign RHS's ADD generates 16 bits.
+                                                                                              : ... note: In instance 'PHASE_ACCUMULATOR_TB.dut'
+   60 |     2'b01: r_phase_counter <= r_phase_counter + I_FREQ_DELTA;
+      |                            ^~
+                     ... For warning description see https://verilator.org/warn/WIDTHTRUNC?v=5.020
+                     ... Use "/* verilator lint_off WIDTHTRUNC */" and lint_on around source to disable this message.
+%Warning-WIDTHTRUNC: /mnt/c/SystemVerilog/Waveform_Generator/00_src/PHASE_ACCUMULATOR.sv:61:28: Operator ASSIGNDLY expects 15 bits on the Assign RHS, but Assign RHS's SUB generates 16 bits.
+                                                                                              : ... note: In instance 'PHASE_ACCUMULATOR_TB.dut'
+   61 |     2'b10: r_phase_counter <= r_phase_counter - I_FREQ_DELTA;
+      |                            ^~
+%Warning-WIDTHEXPAND: /mnt/c/SystemVerilog/Waveform_Generator/00_src/PHASE_ACCUMULATOR.sv:68:45: Operator EQ expects 16 bits on the LHS, but LHS's VARREF 'r_phase_counter' generates 15 bits.
+                                                                                               : ... note: In instance 'PHASE_ACCUMULATOR_TB.dut'
+   68 | assign w_phase_overflow  = (r_phase_counter == (15'h4E20 - I_FREQ_DELTA));
+      |                                             ^~
+%Warning-WIDTHEXPAND: /mnt/c/SystemVerilog/Waveform_Generator/00_src/PHASE_ACCUMULATOR.sv:69:45: Operator EQ expects 16 bits on the LHS, but LHS's VARREF 'r_phase_counter' generates 15 bits.
+                                                                                               : ... note: In instance 'PHASE_ACCUMULATOR_TB.dut'
+   69 | assign w_phase_underflow = (r_phase_counter == (RESET_NUMBER + I_FREQ_DELTA));
+      |                                             ^~
+%Warning-WIDTHTRUNC: ../01_tb/PHASE_ACCUMULATOR_TB.sv:145:5: Operator TASKREF 'check_counter' expects 15 bits on the Function Argument, but Function Argument's MULS generates 32 bits.
+                                                           : ... note: In instance 'PHASE_ACCUMULATOR_TB'
+  145 |     check_counter(index * 5000, "Sine counter counts up");
+      |     ^~~~~~~~~~~~~
+%Warning-UNUSEDPARAM: ../01_tb/PHASE_ACCUMULATOR_TB.sv:6:12: Parameter is not used: 'ST_WAVE_TYPE'
+                                                           : ... note: In instance 'PHASE_ACCUMULATOR_TB'
+    6 | localparam ST_WAVE_TYPE     = 4'd1;
+      |            ^~~~~~~~~~~~
+%Warning-UNUSEDPARAM: ../01_tb/PHASE_ACCUMULATOR_TB.sv:9:12: Parameter is not used: 'ST_UP_SINE_2'
+                                                           : ... note: In instance 'PHASE_ACCUMULATOR_TB'
+    9 | localparam ST_UP_SINE_2     = 4'd4;
+      |            ^~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: ../01_tb/PHASE_ACCUMULATOR_TB.sv:23:14: Signal is not used: 'O_UNDERFLOW'
+                                                             : ... note: In instance 'PHASE_ACCUMULATOR_TB'
+   23 | logic        O_UNDERFLOW;
+      |              ^~~~~~~~~~~
+%Warning-BLKSEQ: ../01_tb/PHASE_ACCUMULATOR_TB.sv:40:17: Blocking assignment '=' in sequential logic process
+                                                       : ... Suggest using delayed assignment '<='
+   40 | always #5 I_CLK = ~I_CLK;
+      |                 ^
+make[1]: Entering directory '/mnt/c/SystemVerilog/Waveform_Generator/02_sim/build/PHASE_ACCUMULATOR_TB'
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated.o /usr/share/verilator/include/verilated.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_vcd_c.o /usr/share/verilator/include/verilated_vcd_c.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_timing.o /usr/share/verilator/include/verilated_timing.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -DVL_TIME_CONTEXT   -fcoroutines -c -o verilated_threads.o /usr/share/verilator/include/verilated_threads.cpp
+/usr/bin/python3 /usr/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include VPHASE_ACCUMULATOR_TB.cpp VPHASE_ACCUMULATOR_TB___024root__DepSet_hae48ab13__0.cpp VPHASE_ACCUMULATOR_TB___024root__DepSet_h6a846c18__0.cpp VPHASE_ACCUMULATOR_TB__main.cpp VPHASE_ACCUMULATOR_TB__Trace__0.cpp VPHASE_ACCUMULATOR_TB__ConstPool_0.cpp VPHASE_ACCUMULATOR_TB___024root__Slow.cpp VPHASE_ACCUMULATOR_TB___024root__DepSet_hae48ab13__0__Slow.cpp VPHASE_ACCUMULATOR_TB___024root__DepSet_h6a846c18__0__Slow.cpp VPHASE_ACCUMULATOR_TB__Syms.cpp VPHASE_ACCUMULATOR_TB__Trace__0__Slow.cpp VPHASE_ACCUMULATOR_TB__TraceDecls__0__Slow.cpp > VPHASE_ACCUMULATOR_TB__ALL.cpp
+g++ -Os  -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-overloaded-virtual -Wno-shadow -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable     -DVL_TIME_CONTEXT   -fcoroutines -c -o VPHASE_ACCUMULATOR_TB__ALL.o VPHASE_ACCUMULATOR_TB__ALL.cpp
+echo "" > VPHASE_ACCUMULATOR_TB__ALL.verilator_deplist.tmp
+Archive ar -rcs VPHASE_ACCUMULATOR_TB__ALL.a VPHASE_ACCUMULATOR_TB__ALL.o
+g++     verilated.o verilated_vcd_c.o verilated_timing.o verilated_threads.o VPHASE_ACCUMULATOR_TB__ALL.a    -pthread -lpthread -latomic   -o VPHASE_ACCUMULATOR_TB
+rm VPHASE_ACCUMULATOR_TB__ALL.verilator_deplist.tmp
+make[1]: Leaving directory '/mnt/c/SystemVerilog/Waveform_Generator/02_sim/build/PHASE_ACCUMULATOR_TB'
+
+TEST 1: Reset
+PASS: State after reset
+PASS: Counter after reset
+PASS: Underflow is asserted at zero
+
+TEST 6: Change triangle to sine while counting down
+
+ALL TESTS PASSED
+- ../01_tb/PHASE_ACCUMULATOR_TB.sv:264: Verilog $finish

@@ -1,0 +1,18 @@
+%Warning-WIDTHTRUNC: /mnt/c/SystemVerilog/Waveform_Generator/00_src/PHASE_ACCUMULATOR.sv:58:28: Operator ASSIGNDLY expects 15 bits on the Assign RHS, but Assign RHS's ADD generates 16 bits.
+                                                                                              : ... note: In instance 'PHASE_ACCUMULATOR'
+   58 |     2'b01: r_phase_counter <= r_phase_counter + I_FREQ_DELTA;
+      |                            ^~
+                     ... For warning description see https://verilator.org/warn/WIDTHTRUNC?v=5.020
+                     ... Use "/* verilator lint_off WIDTHTRUNC */" and lint_on around source to disable this message.
+%Warning-WIDTHTRUNC: /mnt/c/SystemVerilog/Waveform_Generator/00_src/PHASE_ACCUMULATOR.sv:59:28: Operator ASSIGNDLY expects 15 bits on the Assign RHS, but Assign RHS's SUB generates 16 bits.
+                                                                                              : ... note: In instance 'PHASE_ACCUMULATOR'
+   59 |     2'b10: r_phase_counter <= r_phase_counter - I_FREQ_DELTA;
+      |                            ^~
+%Warning-WIDTHEXPAND: /mnt/c/SystemVerilog/Waveform_Generator/00_src/PHASE_ACCUMULATOR.sv:66:45: Operator EQ expects 16 bits on the LHS, but LHS's VARREF 'r_phase_counter' generates 15 bits.
+                                                                                               : ... note: In instance 'PHASE_ACCUMULATOR'
+   66 | assign w_phase_overflow  = (r_phase_counter == (15'h4E20 - I_FREQ_DELTA));
+      |                                             ^~
+%Warning-WIDTHEXPAND: /mnt/c/SystemVerilog/Waveform_Generator/00_src/PHASE_ACCUMULATOR.sv:67:45: Operator EQ expects 16 bits on the LHS, but LHS's VARREF 'r_phase_counter' generates 15 bits.
+                                                                                               : ... note: In instance 'PHASE_ACCUMULATOR'
+   67 | assign w_phase_underflow = (r_phase_counter == (RESET_NUMBER + I_FREQ_DELTA));
+      |                                             ^~

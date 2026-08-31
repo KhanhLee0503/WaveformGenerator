@@ -1,0 +1,8 @@
+1. Tên Port phải có tiền tố I/O tùy thuộc nếu nó là input hay output (tên Port viết hoa hoàn toàn)
+2. nếu là dây thì phải có tiền tố w, nếu là register thì phải có tiền tố r (tên của khai báo logic thì viết thường)
+3. endmodule phải có tên module phía sau
+4. FSM phải chia ra làm 3 khối tách biệt
+5. Nếu là parameters thì phải có tiền tố PARA (Viết hoa hoàn toàn)
+6. Các khối always_comb, always_ff hay generation phải có tên
+7. Tên module phải viết hoa hoàn toàn, instance thì viết thường
+8. Indent 2 space

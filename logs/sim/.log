@@ -1,0 +1,11 @@
+%Error: Cannot find file containing module: ../01_tb/.sv
+%Error: This may be because there's no search path specified with -I<dir>.
+        ... Looked in:
+             ../01_tb/.sv
+             ../01_tb/.sv.v
+             ../01_tb/.sv.sv
+             obj_dir/../01_tb/.sv
+             obj_dir/../01_tb/.sv.v
+             obj_dir/../01_tb/.sv.sv
+%Error: Cannot find file containing module: ../02_sim/build
+%Error: Exiting due to 3 error(s)

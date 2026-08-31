@@ -1,0 +1,1 @@
+$(WG_HOME)/00_src/PHASE_ACCUMULATOR.sv
