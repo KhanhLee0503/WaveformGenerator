@@ -1,4 +1,5 @@
 `timescale 1ns/1ps
+
 module PRBS_GENERATOR(
   input logic         I_CLK,
   input logic         I_RESET_N,

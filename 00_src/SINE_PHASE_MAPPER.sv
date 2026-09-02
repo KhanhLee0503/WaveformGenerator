@@ -1,4 +1,5 @@
 `timescale 1ns/1ps
+
 module SINE_PHASE_MAPPER(
   input logic [1:0]   I_PHASE_QUADRANT,
   input logic [11:0]  I_PHASE_COUNTER,

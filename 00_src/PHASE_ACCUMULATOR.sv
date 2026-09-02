@@ -18,7 +18,7 @@ module PHASE_ACCUMULATOR
 
 logic [PARA_COUNTER_WD-1:0] r_phase_counter;
 
-assign O_PHASE_FREQ_RANGE_ERROR = (I_PHASE_FTW < 32'h000DA741) || (I_PHASE_FTW > 32'h35555555);
+assign O_PHASE_FREQ_RANGE_ERROR = (I_PHASE_FTW < 32'h000D_A741) || (I_PHASE_FTW > 32'h3555_5555);
 
 //=============================================================
 //                      PHASE COUNTER
