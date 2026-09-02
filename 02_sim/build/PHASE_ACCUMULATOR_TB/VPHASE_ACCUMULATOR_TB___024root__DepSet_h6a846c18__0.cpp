@@ -31,36 +31,20 @@ VL_INLINE_OPT VlCoroutine VPHASE_ACCUMULATOR_TB___024root___eval_initial__TOP__V
         co_await vlSelf->__VdlySched.delay(0x1388ULL, 
                                            nullptr, 
                                            "../01_tb/PHASE_ACCUMULATOR_TB.sv", 
-                                           40);
+                                           29);
         vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_CLK = 
             (1U & (~ (IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_CLK)));
     }
 }
 
-extern const VlUnpacked<CData/*3:0*/, 512> VPHASE_ACCUMULATOR_TB__ConstPool__TABLE_h91c60fe3_0;
-
 VL_INLINE_OPT void VPHASE_ACCUMULATOR_TB___024root___act_comb__TOP__0(VPHASE_ACCUMULATOR_TB___024root* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VPHASE_ACCUMULATOR_TB__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VPHASE_ACCUMULATOR_TB___024root___act_comb__TOP__0\n"); );
-    // Init
-    SData/*8:0*/ __Vtableidx1;
-    __Vtableidx1 = 0;
     // Body
-    __Vtableidx1 = (((IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_START) 
-                     << 8U) | ((((IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter) 
-                                 <= (IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_FREQ_DELTA)) 
-                                << 7U) | ((((IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter) 
-                                            >= (0xffffU 
-                                                & ((IData)(0x4e20U) 
-                                                   - (IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_FREQ_DELTA)))) 
-                                           << 6U) | 
-                                          (((IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_WAVE_TYPE) 
-                                            << 4U) 
-                                           | (IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_current_state)))));
-    vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_next_state 
-        = VPHASE_ACCUMULATOR_TB__ConstPool__TABLE_h91c60fe3_0
-        [__Vtableidx1];
+    vlSelf->PHASE_ACCUMULATOR_TB__DOT__O_PHASE_FREQ_RANGE_ERROR 
+        = ((0xda741U > vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_PHASE_FTW) 
+           | (0x35555555U < vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_PHASE_FTW));
 }
 
 void VPHASE_ACCUMULATOR_TB___024root___eval_act(VPHASE_ACCUMULATOR_TB___024root* vlSelf) {
@@ -68,51 +52,34 @@ void VPHASE_ACCUMULATOR_TB___024root___eval_act(VPHASE_ACCUMULATOR_TB___024root*
     VPHASE_ACCUMULATOR_TB__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VPHASE_ACCUMULATOR_TB___024root___eval_act\n"); );
     // Body
-    if ((6ULL & vlSelf->__VactTriggered.word(0U))) {
+    if ((0xeULL & vlSelf->__VactTriggered.word(0U))) {
         VPHASE_ACCUMULATOR_TB___024root___act_comb__TOP__0(vlSelf);
     }
 }
-
-extern const VlUnpacked<CData/*0:0*/, 16> VPHASE_ACCUMULATOR_TB__ConstPool__TABLE_hcff3160a_0;
-extern const VlUnpacked<CData/*0:0*/, 16> VPHASE_ACCUMULATOR_TB__ConstPool__TABLE_h488b5b51_0;
-extern const VlUnpacked<CData/*0:0*/, 16> VPHASE_ACCUMULATOR_TB__ConstPool__TABLE_h7b60571c_0;
 
 VL_INLINE_OPT void VPHASE_ACCUMULATOR_TB___024root___nba_sequent__TOP__0(VPHASE_ACCUMULATOR_TB___024root* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     VPHASE_ACCUMULATOR_TB__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VPHASE_ACCUMULATOR_TB___024root___nba_sequent__TOP__0\n"); );
     // Init
-    CData/*3:0*/ __Vtableidx2;
-    __Vtableidx2 = 0;
+    IData/*31:0*/ __Vdly__PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter;
+    __Vdly__PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter = 0;
     // Body
+    __Vdly__PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter 
+        = vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter;
     if (vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_RESET_N) {
-        vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter 
-            = ((IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__w_phase_clear)
-                ? 0U : (0x7fffU & ((IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__w_phase_down)
-                                    ? ((IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__w_phase_up)
-                                        ? (IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter)
-                                        : ((IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter) 
-                                           - (IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_FREQ_DELTA)))
-                                    : ((IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__w_phase_up)
-                                        ? ((IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter) 
-                                           + (IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_FREQ_DELTA))
-                                        : (IData)(vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter)))));
-        vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_current_state 
-            = vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_next_state;
+        if (vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_PHASE_CLEAR) {
+            __Vdly__PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter = 0U;
+        } else if (vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_PHASE_SAMPLE_EN) {
+            __Vdly__PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter 
+                = (vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter 
+                   + vlSelf->PHASE_ACCUMULATOR_TB__DOT__I_PHASE_FTW);
+        }
     } else {
-        vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter = 0U;
-        vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_current_state = 0U;
+        __Vdly__PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter = 0U;
     }
-    __Vtableidx2 = vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_current_state;
-    vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__w_phase_clear 
-        = VPHASE_ACCUMULATOR_TB__ConstPool__TABLE_hcff3160a_0
-        [__Vtableidx2];
-    vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__w_phase_up 
-        = VPHASE_ACCUMULATOR_TB__ConstPool__TABLE_h488b5b51_0
-        [__Vtableidx2];
-    vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__w_phase_down 
-        = VPHASE_ACCUMULATOR_TB__ConstPool__TABLE_h7b60571c_0
-        [__Vtableidx2];
+    vlSelf->PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter 
+        = __Vdly__PHASE_ACCUMULATOR_TB__DOT__dut__DOT__r_phase_counter;
 }
 
 void VPHASE_ACCUMULATOR_TB___024root___eval_nba(VPHASE_ACCUMULATOR_TB___024root* vlSelf) {
@@ -122,9 +89,8 @@ void VPHASE_ACCUMULATOR_TB___024root___eval_nba(VPHASE_ACCUMULATOR_TB___024root*
     // Body
     if ((1ULL & vlSelf->__VnbaTriggered.word(0U))) {
         VPHASE_ACCUMULATOR_TB___024root___nba_sequent__TOP__0(vlSelf);
-        vlSelf->__Vm_traceActivity[3U] = 1U;
     }
-    if ((7ULL & vlSelf->__VnbaTriggered.word(0U))) {
+    if ((0xeULL & vlSelf->__VnbaTriggered.word(0U))) {
         VPHASE_ACCUMULATOR_TB___024root___act_comb__TOP__0(vlSelf);
     }
 }
@@ -135,6 +101,9 @@ void VPHASE_ACCUMULATOR_TB___024root___timing_resume(VPHASE_ACCUMULATOR_TB___024
     VL_DEBUG_IF(VL_DBG_MSGF("+    VPHASE_ACCUMULATOR_TB___024root___timing_resume\n"); );
     // Body
     if ((2ULL & vlSelf->__VactTriggered.word(0U))) {
+        vlSelf->__VtrigSched_hcf53ce3e__0.resume("@(negedge PHASE_ACCUMULATOR_TB.I_CLK)");
+    }
+    if ((8ULL & vlSelf->__VactTriggered.word(0U))) {
         vlSelf->__VtrigSched_hcf53cd7b__0.resume("@(posedge PHASE_ACCUMULATOR_TB.I_CLK)");
     }
     if ((4ULL & vlSelf->__VactTriggered.word(0U))) {
@@ -148,6 +117,9 @@ void VPHASE_ACCUMULATOR_TB___024root___timing_commit(VPHASE_ACCUMULATOR_TB___024
     VL_DEBUG_IF(VL_DBG_MSGF("+    VPHASE_ACCUMULATOR_TB___024root___timing_commit\n"); );
     // Body
     if ((! (2ULL & vlSelf->__VactTriggered.word(0U)))) {
+        vlSelf->__VtrigSched_hcf53ce3e__0.commit("@(negedge PHASE_ACCUMULATOR_TB.I_CLK)");
+    }
+    if ((! (8ULL & vlSelf->__VactTriggered.word(0U)))) {
         vlSelf->__VtrigSched_hcf53cd7b__0.commit("@(posedge PHASE_ACCUMULATOR_TB.I_CLK)");
     }
 }
@@ -159,7 +131,7 @@ bool VPHASE_ACCUMULATOR_TB___024root___eval_phase__act(VPHASE_ACCUMULATOR_TB___0
     VPHASE_ACCUMULATOR_TB__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    VPHASE_ACCUMULATOR_TB___024root___eval_phase__act\n"); );
     // Init
-    VlTriggerVec<3> __VpreTriggered;
+    VlTriggerVec<4> __VpreTriggered;
     CData/*0:0*/ __VactExecute;
     // Body
     VPHASE_ACCUMULATOR_TB___024root___eval_triggers__act(vlSelf);

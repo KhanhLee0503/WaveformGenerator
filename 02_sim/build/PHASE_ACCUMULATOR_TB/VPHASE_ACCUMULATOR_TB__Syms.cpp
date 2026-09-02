@@ -51,5 +51,5 @@ VPHASE_ACCUMULATOR_TB__Syms::VPHASE_ACCUMULATOR_TB__Syms(VerilatedContext* conte
     // Setup scopes
     __Vscope_PHASE_ACCUMULATOR_TB.configure(this, name(), "PHASE_ACCUMULATOR_TB", "PHASE_ACCUMULATOR_TB", -9, VerilatedScope::SCOPE_OTHER);
     __Vscope_PHASE_ACCUMULATOR_TB__check_counter.configure(this, name(), "PHASE_ACCUMULATOR_TB.check_counter", "check_counter", -9, VerilatedScope::SCOPE_OTHER);
-    __Vscope_PHASE_ACCUMULATOR_TB__check_state.configure(this, name(), "PHASE_ACCUMULATOR_TB.check_state", "check_state", -9, VerilatedScope::SCOPE_OTHER);
+    __Vscope_PHASE_ACCUMULATOR_TB__check_range_error.configure(this, name(), "PHASE_ACCUMULATOR_TB.check_range_error", "check_range_error", -9, VerilatedScope::SCOPE_OTHER);
 }

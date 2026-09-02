@@ -36,7 +36,7 @@ class alignas(VL_CACHE_LINE_BYTES)VPHASE_ACCUMULATOR_TB__Syms final : public Ver
     // SCOPE NAMES
     VerilatedScope __Vscope_PHASE_ACCUMULATOR_TB;
     VerilatedScope __Vscope_PHASE_ACCUMULATOR_TB__check_counter;
-    VerilatedScope __Vscope_PHASE_ACCUMULATOR_TB__check_state;
+    VerilatedScope __Vscope_PHASE_ACCUMULATOR_TB__check_range_error;
 
     // CONSTRUCTORS
     VPHASE_ACCUMULATOR_TB__Syms(VerilatedContext* contextp, const char* namep, VPHASE_ACCUMULATOR_TB* modelp);

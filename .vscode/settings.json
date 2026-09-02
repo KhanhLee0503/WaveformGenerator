@@ -1,0 +1,6 @@
+{
+  "verilog.linting.linter": "iverilog",
+  "verilog.linting.iverilog.systemVerilog.standard": "SystemVerilog2012",
+  "verilog.linting.iverilog.arguments": "-y 00_src -Y .sv",
+  "verilog.linting.iverilog.runAtFileLocation": false
+}

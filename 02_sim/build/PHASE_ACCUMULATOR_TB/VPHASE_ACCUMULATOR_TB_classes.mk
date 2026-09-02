@@ -30,7 +30,6 @@ VM_CLASSES_FAST += \
 
 # Generated module classes, non-fast-path, compile with low/medium optimization
 VM_CLASSES_SLOW += \
-	VPHASE_ACCUMULATOR_TB__ConstPool_0 \
 	VPHASE_ACCUMULATOR_TB___024root__Slow \
 	VPHASE_ACCUMULATOR_TB___024root__DepSet_hae48ab13__0__Slow \
 	VPHASE_ACCUMULATOR_TB___024root__DepSet_h6a846c18__0__Slow \
