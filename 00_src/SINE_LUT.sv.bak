@@ -11,7 +11,7 @@ module SINE_LUT(
 logic [23:0] r_sine_sample [0:4095];
 
 initial begin
-  $readmemh("C:/SystemVerilog/Waveform_Generator/00_src/sine_lut.mem", r_sine_sample);
+  $readmemh("SINE_LUT.mem", r_sine_sample);
 end
 
 always_ff@(posedge I_CLK or negedge I_RESET_N) begin

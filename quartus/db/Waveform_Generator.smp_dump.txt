@@ -1,0 +1,7 @@
+
+State Machine - |WAVE_GEN_TOP|INPUT_CONTROL:u_input_control|r_current_state
+Name r_current_state.ST_AMPLITUDE r_current_state.ST_DUTY_CYCLE r_current_state.ST_FREQ r_current_state.ST_IDLE 
+r_current_state.ST_IDLE 0 0 0 0 
+r_current_state.ST_FREQ 0 0 1 1 
+r_current_state.ST_DUTY_CYCLE 0 1 0 1 
+r_current_state.ST_AMPLITUDE 1 0 0 1 

@@ -1,0 +1,153 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "O_PHASE_FREQ_RANGE_ERROR",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[15]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[16]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[17]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[18]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[19]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[20]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[21]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[22]",
+					"strict" : false
+				},
+				{
+					"name" : "O_WAVE_DATA[23]",
+					"strict" : false
+				},
+				{
+					"name" : "I_NOISE_INJECT_EN",
+					"strict" : false
+				},
+				{
+					"name" : "I_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "I_RESET_N",
+					"strict" : false
+				},
+				{
+					"name" : "I_WAVE_SELECT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "I_WAVE_SELECT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "I_PHASE_SAMPLE_EN",
+					"strict" : false
+				},
+				{
+					"name" : "I_UP",
+					"strict" : false
+				},
+				{
+					"name" : "I_DOWN",
+					"strict" : false
+				},
+				{
+					"name" : "I_PHASE_CLEAR",
+					"strict" : false
+				},
+				{
+					"name" : "I_CHANGE_MODE",
+					"strict" : false
+				},
+				{
+					"name" : "I_START",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
