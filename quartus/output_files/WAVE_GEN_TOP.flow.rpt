@@ -1,5 +1,5 @@
 Flow report for WAVE_GEN_TOP
-Thu Sep  3 11:16:13 2026
+Thu Sep  3 11:44:03 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -41,15 +41,15 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Thu Sep  3 11:16:13 2026           ;
+; Flow Status                     ; Successful - Thu Sep  3 11:44:03 2026           ;
 ; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                   ; WAVE_GEN_TOP                                    ;
 ; Top-level Entity Name           ; WAVE_GEN_TOP                                    ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CGXFC7C7F23C8                                  ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 265 / 56,480 ( < 1 % )                          ;
-; Total registers                 ; 325                                             ;
+; Logic utilization (in ALMs)     ; 267 / 56,480 ( < 1 % )                          ;
+; Total registers                 ; 308                                             ;
 ; Total pins                      ; 36 / 268 ( 13 % )                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 98,304 / 7,024,640 ( 1 % )                      ;
@@ -68,7 +68,7 @@ on the Quartus Prime software download page.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/03/2026 11:12:54 ;
+; Start date & time ; 09/03/2026 11:41:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; WAVE_GEN_TOP        ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ on the Quartus Prime software download page.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 345052807176.178840877326568           ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 345052807176.178841050511692           ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -101,12 +101,12 @@ on the Quartus Prime software download page.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:29     ; 1.0                     ; 4905 MB             ; 00:00:18                           ;
-; Fitter               ; 00:02:28     ; 1.0                     ; 7911 MB             ; 00:13:45                           ;
-; Assembler            ; 00:00:13     ; 1.0                     ; 5370 MB             ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:07     ; 1.4                     ; 5467 MB             ; 00:00:07                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4763 MB             ; 00:00:01                           ;
-; Total                ; 00:03:18     ; --                      ; --                  ; 00:14:18                           ;
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4910 MB             ; 00:00:15                           ;
+; Fitter               ; 00:01:57     ; 1.0                     ; 7925 MB             ; 00:11:44                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 5369 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.5                     ; 5466 MB             ; 00:00:07                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4762 MB             ; 00:00:01                           ;
+; Total                ; 00:02:15     ; --                      ; --                  ; 00:12:12                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

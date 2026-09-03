@@ -115,7 +115,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AA15      :        :                   :      
 VCCIO4A                      : AA16      : power  :                   : 2.5V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA17      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA18      :        :                   :         : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : AA19      :        :                   :         : 4A        :                
+I_WAVE_SELECT[0]             : AA19      : input  : 2.5 V             :         : 4A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA20      :        :                   :         : 4A        :                
 VCCIO4A                      : AA21      : power  :                   : 2.5V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA22      :        :                   :         : 4A        :                
@@ -182,7 +182,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :      
 GND                          : C17       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C18       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C19       :        :                   :         : 7A        :                
-O_WAVE_DATA[7]               : C20       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C20       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C21       :        :                   :         : 7A        :                
 VCCIO7A                      : C22       : power  :                   : 2.5V    : 7A        :                
 GND                          : D1        : gnd    :                   :         :           :                
@@ -292,7 +292,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : H16       :        :                   :      
 VCCIO7A                      : H17       : power  :                   : 2.5V    : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H18       :        :                   :         : 7A        :                
 VCCA_FPLL                    : H19       : power  :                   : 2.5V    :           :                
-O_PHASE_FREQ_RANGE_ERROR     : H20       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H20       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H21       :        :                   :         : 7A        :                
 GND                          : H22       : gnd    :                   :         :           :                
 GXB_NC                       : J1        :        :                   :         : B1L       :                
@@ -333,12 +333,12 @@ VCC                          : K13       : power  :                   : 1.1V    
 GND                          : K14       : gnd    :                   :         :           :                
 VCC                          : K15       : power  :                   : 1.1V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K16       :        :                   :         : 7A        :                
-O_WAVE_DATA[2]               : K17       : output : 2.5 V             :         : 5B        : N              
+I_DOWN                       : K17       : input  : 2.5 V             :         : 5B        : N              
 VCCIO5B                      : K18       : power  :                   : 2.5V    : 5B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K19       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K20       :        :                   :         : 7A        :                
-I_UP                         : K21       : input  : 2.5 V             :         : 5B        : N              
-O_WAVE_DATA[6]               : K22       : output : 2.5 V             :         : 5B        : N              
+O_WAVE_DATA[7]               : K21       : output : 2.5 V             :         : 5B        : N              
+I_WAVE_SELECT[1]             : K22       : input  : 2.5 V             :         : 5B        : N              
 GND                          : L1        :        :                   :         : B1L       :                
 GND                          : L2        :        :                   :         : B1L       :                
 GND                          : L3        : gnd    :                   :         :           :                
@@ -355,12 +355,12 @@ GND                          : L13       : gnd    :                   :         
 VCC                          : L14       : power  :                   : 1.1V    :           :                
 GND                          : L15       : gnd    :                   :         :           :                
 VCC                          : L16       : power  :                   : 1.1V    :           :                
-O_WAVE_DATA[5]               : L17       : output : 2.5 V             :         : 5B        : N              
-I_WAVE_SELECT[0]             : L18       : input  : 2.5 V             :         : 5B        : N              
-I_CHANGE_MODE                : L19       : input  : 2.5 V             :         : 5B        : N              
+O_PHASE_FREQ_RANGE_ERROR     : L17       : output : 2.5 V             :         : 5B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L18       :        :                   :         : 5B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L19       :        :                   :         : 5B        :                
 VREFB5BN0                    : L20       : power  :                   :         : 5B        :                
 GND                          : L21       : gnd    :                   :         :           :                
-O_WAVE_DATA[13]              : L22       : output : 2.5 V             :         : 5B        : N              
+O_WAVE_DATA[4]               : L22       : output : 2.5 V             :         : 5B        : N              
 GND                          : M1        : gnd    :                   :         :           :                
 GND                          : M2        : gnd    :                   :         :           :                
 VCCH_GXBL                    : M3        : power  :                   : 2.5V    :           :                
@@ -380,9 +380,9 @@ I_CLK                        : M16       : input  : 2.5 V             :         
 VCCPD5B                      : M17       : power  :                   : 2.5V    : 5B        :                
 I_PHASE_CLEAR                : M18       : input  : 2.5 V             :         : 5B        : N              
 VCCIO5B                      : M19       : power  :                   : 2.5V    : 5B        :                
-O_WAVE_DATA[19]              : M20       : output : 2.5 V             :         : 5B        : N              
-I_START                      : M21       : input  : 2.5 V             :         : 5B        : N              
-I_PHASE_SAMPLE_EN            : M22       : input  : 2.5 V             :         : 5B        : N              
+O_WAVE_DATA[16]              : M20       : output : 2.5 V             :         : 5B        : N              
+O_WAVE_DATA[9]               : M21       : output : 2.5 V             :         : 5B        : N              
+I_NOISE_INJECT_EN            : M22       : input  : 2.5 V             :         : 5B        : N              
 GXB_NC                       : N1        :        :                   :         : B0L       :                
 GXB_NC                       : N2        :        :                   :         : B0L       :                
 GND                          : N3        : gnd    :                   :         :           :                
@@ -398,12 +398,12 @@ VCC                          : N12       : power  :                   : 1.1V    
 GND                          : N13       : gnd    :                   :         :           :                
 VCC                          : N14       : power  :                   : 1.1V    :           :                
 GND                          : N15       : gnd    :                   :         :           :                
-O_WAVE_DATA[0]               : N16       : output : 2.5 V             :         : 5B        : N              
+O_WAVE_DATA[10]              : N16       : output : 2.5 V             :         : 5B        : N              
 GND                          : N17       : gnd    :                   :         :           :                
 VCCPD5B                      : N18       : power  :                   : 2.5V    : 5B        :                
-I_WAVE_SELECT[1]             : N19       : input  : 2.5 V             :         : 5B        : N              
-I_DOWN                       : N20       : input  : 2.5 V             :         : 5B        : N              
-I_NOISE_INJECT_EN            : N21       : input  : 2.5 V             :         : 5B        : N              
+O_WAVE_DATA[11]              : N19       : output : 2.5 V             :         : 5B        : N              
+I_UP                         : N20       : input  : 2.5 V             :         : 5B        : N              
+I_START                      : N21       : input  : 2.5 V             :         : 5B        : N              
 GND                          : N22       : gnd    :                   :         :           :                
 GND                          : P1        : gnd    :                   :         :           :                
 GND                          : P2        : gnd    :                   :         :           :                
@@ -420,13 +420,13 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : P12       :        :                   :      
 VCC                          : P13       : power  :                   : 1.1V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P14       :        :                   :         : 4A        :                
 VCC                          : P15       : power  :                   : 1.1V    :           :                
-O_WAVE_DATA[10]              : P16       : output : 2.5 V             :         : 5A        : N              
-O_WAVE_DATA[15]              : P17       : output : 2.5 V             :         : 5A        : N              
-O_WAVE_DATA[21]              : P18       : output : 2.5 V             :         : 5A        : N              
-O_WAVE_DATA[18]              : P19       : output : 2.5 V             :         : 5A        : N              
+O_WAVE_DATA[19]              : P16       : output : 2.5 V             :         : 5A        : N              
+O_WAVE_DATA[21]              : P17       : output : 2.5 V             :         : 5A        : N              
+O_WAVE_DATA[2]               : P18       : output : 2.5 V             :         : 5A        : N              
+O_WAVE_DATA[17]              : P19       : output : 2.5 V             :         : 5A        : N              
 VCCIO5A                      : P20       : power  :                   : 2.5V    : 5A        :                
 VCCPD5A                      : P21       : power  :                   : 2.5V    : 5A        :                
-O_WAVE_DATA[9]               : P22       : output : 2.5 V             :         : 5A        : N              
+O_WAVE_DATA[1]               : P22       : output : 2.5 V             :         : 5A        : N              
 GND                          : R1        :        :                   :         : B0L       :                
 GND                          : R2        :        :                   :         : B0L       :                
 GND                          : R3        : gnd    :                   :         :           :                
@@ -440,15 +440,15 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : R10       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : R11       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R12       :        :                   :         : 3B        :                
 GND                          : R13       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R14       :        :                   :         : 4A        :                
-O_WAVE_DATA[11]              : R15       : output : 2.5 V             :         : 5A        : N              
-O_WAVE_DATA[23]              : R16       : output : 2.5 V             :         : 5A        : N              
-O_WAVE_DATA[3]               : R17       : output : 2.5 V             :         : 5A        : N              
+I_CHANGE_MODE                : R14       : input  : 2.5 V             :         : 4A        : N              
+O_WAVE_DATA[5]               : R15       : output : 2.5 V             :         : 5A        : N              
+O_WAVE_DATA[8]               : R16       : output : 2.5 V             :         : 5A        : N              
+O_WAVE_DATA[6]               : R17       : output : 2.5 V             :         : 5A        : N              
 VCCIO5A                      : R18       : power  :                   : 2.5V    : 5A        :                
 VCCPGM                       : R19       : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
 VREFB5AN0                    : R20       : power  :                   :         : 5A        :                
-O_WAVE_DATA[4]               : R21       : output : 2.5 V             :         : 5A        : N              
-O_WAVE_DATA[17]              : R22       : output : 2.5 V             :         : 5A        : N              
+I_PHASE_SAMPLE_EN            : R21       : input  : 2.5 V             :         : 5A        : N              
+O_WAVE_DATA[15]              : R22       : output : 2.5 V             :         : 5A        : N              
 GND                          : T1        : gnd    :                   :         :           :                
 GND                          : T2        : gnd    :                   :         :           :                
 VCCH_GXBL                    : T3        : power  :                   : 2.5V    :           :                
@@ -463,14 +463,14 @@ VCCIO3B                      : T11       : power  :                   : 2.5V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : T12       :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T13       :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T14       :        :                   :         : 4A        :                
-O_WAVE_DATA[8]               : T15       : output : 2.5 V             :         : 5A        : N              
+O_WAVE_DATA[0]               : T15       : output : 2.5 V             :         : 5A        : N              
 GND                          : T16       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T17       :        :                   :         : 5A        :                
-O_WAVE_DATA[20]              : T18       : output : 2.5 V             :         : 5A        : N              
-O_WAVE_DATA[14]              : T19       : output : 2.5 V             :         : 5A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : T20       :        :                   :         : 5A        :                
+O_WAVE_DATA[23]              : T17       : output : 2.5 V             :         : 5A        : N              
+O_WAVE_DATA[22]              : T18       : output : 2.5 V             :         : 5A        : N              
+O_WAVE_DATA[13]              : T19       : output : 2.5 V             :         : 5A        : N              
+O_WAVE_DATA[18]              : T20       : output : 2.5 V             :         : 5A        : N              
 GND                          : T21       : gnd    :                   :         :           :                
-O_WAVE_DATA[16]              : T22       : output : 2.5 V             :         : 5A        : N              
+O_WAVE_DATA[3]               : T22       : output : 2.5 V             :         : 5A        : N              
 GXB_NC                       : U1        :        :                   :         : B0L       :                
 GXB_NC                       : U2        :        :                   :         : B0L       :                
 GND                          : U3        : gnd    :                   :         :           :                
@@ -486,12 +486,12 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : U12       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : U13       :        :                   :         : 4A        :                
 VCCIO4A                      : U14       : power  :                   : 2.5V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U15       :        :                   :         : 4A        :                
-O_WAVE_DATA[1]               : U16       : output : 2.5 V             :         : 4A        : N              
-O_WAVE_DATA[12]              : U17       : output : 2.5 V             :         : 4A        : N              
+O_WAVE_DATA[14]              : U16       : output : 2.5 V             :         : 4A        : N              
+O_WAVE_DATA[20]              : U17       : output : 2.5 V             :         : 4A        : N              
 VCCA_FPLL                    : U18       : power  :                   : 2.5V    :           :                
 VCCIO4A                      : U19       : power  :                   : 2.5V    : 4A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : U20       :        :                   :         : 4A        :                
-O_WAVE_DATA[22]              : U21       : output : 2.5 V             :         : 4A        : N              
+O_WAVE_DATA[12]              : U20       : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U21       :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U22       :        :                   :         : 4A        :                
 GND                          : V1        : gnd    :                   :         :           :                
 GND                          : V2        : gnd    :                   :         :           :                
