@@ -4,7 +4,7 @@ module WAVE_GEN_TOP(
   input logic         I_CLK,
   input logic         I_RESET_N,
 
-  input logic [1:0]   I_WAVE_SELECT,
+  input logic [2:0]   I_WAVE_SELECT,
   input logic         I_START,
   input logic         I_CHANGE_MODE,
   input logic         I_UP,

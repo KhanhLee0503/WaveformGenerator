@@ -4,7 +4,7 @@ module WAVE_GEN(
   input logic         I_CLK,
   input logic         I_RESET_N,
 
-  input logic [1:0]   I_WAVE_SELECT,
+  input logic [2:0]   I_WAVE_SELECT,
 
   input logic [31:0]  I_DUTY_CYCLE_TH,
 
@@ -27,12 +27,15 @@ logic [23:0] w_square_data;
 logic [23:0] w_triangle_data;
 logic [23:0] w_sawtooth_data;
 logic [23:0] w_prbs_data;
+logic [23:0] w_ecg_data;
 logic [23:0] w_wave_data;
 
 logic [39:0] w_amplitude_scaled;
+logic [23:0] w_amplitude_negate;
+logic [23:0] w_wave_data_output;
 
 // Internal registers to hold the input values
-logic [1:0]  r_wave_select;
+logic [2:0]  r_wave_select;
 logic        r_phase_sample_en;
 logic [31:0] r_phase_ftw;
 logic        r_phase_clear;
@@ -84,20 +87,37 @@ PRBS_GENERATOR u_prbs_gen(
   .O_PRBS_DATA              (w_prbs_data)
 );
 
+ECG_GENERATOR u_ecg_gen(
+  .I_CLK                   (I_CLK),
+  .I_RESET_N               (I_RESET_N),
+  .I_ADDR                  (w_phase_counter[31:20]),
+  .O_SAMPLE                (w_ecg_data)
+);
+
 always_comb begin
   case (r_wave_select)
-    2'b00: w_wave_data   = w_sine_data;
-    2'b01: w_wave_data   = r_square_delay;
-    2'b10: w_wave_data   = r_triangle_delay;
-    2'b11: w_wave_data   = r_sawtooth_delay;
-    default: w_wave_data = 24'h000000;
+    3'b000: w_wave_data   = w_sine_data;
+    3'b001: w_wave_data   = r_square_delay;
+    3'b010: w_wave_data   = r_triangle_delay;
+    3'b011: w_wave_data   = r_sawtooth_delay;
+    3'b100: w_wave_data   = w_ecg_data;
+    default: w_wave_data  = 24'h000000;
   endcase
 end
 
 assign w_amplitude_scaled = (w_wave_data * r_amplitude) >> 15;
+
+NEGATIVE_MULTIPLIER u_neg_mult(
+  .I_INPUT      (w_wave_data),
+  .I_MULTIPLIER (r_amplitude),
+  .O_OUTPUT     (w_amplitude_negate)
+);
+
+assign w_wave_data_output = w_wave_data[23] ? w_amplitude_negate : w_amplitude_scaled[23:0];
+
 assign O_WAVE_DATA = (I_NOISE_INJECT_EN) ? 
-                     (w_amplitude_scaled[23:0] + {{16{w_prbs_data[7]}}, w_prbs_data[7:0]}) :
-                     w_amplitude_scaled[23:0];
+                     (w_wave_data_output + {{16{w_prbs_data[7]}}, w_prbs_data[7:0]}) :
+                      w_wave_data_output;
 
 always_ff @(posedge I_CLK or negedge I_RESET_N) begin
   if(!I_RESET_N) begin
