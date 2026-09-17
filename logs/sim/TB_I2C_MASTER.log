@@ -1,0 +1,42 @@
+%Warning-PINMISSING: ../01_tb/TB_I2C_MASTER.sv:33:7: Cell has missing pin: 'I_CLK'
+   33 |     ) dut (
+      |       ^~~
+                     ... For warning description see https://verilator.org/warn/PINMISSING?v=5.020
+                     ... Use "/* verilator lint_off PINMISSING */" and lint_on around source to disable this message.
+%Warning-PINMISSING: ../01_tb/TB_I2C_MASTER.sv:33:7: Cell has missing pin: 'I_RST_N'
+   33 |     ) dut (
+      |       ^~~
+%Warning-PINMISSING: ../01_tb/TB_I2C_MASTER.sv:33:7: Cell has missing pin: 'IO_I2C_SCL'
+   33 |     ) dut (
+      |       ^~~
+%Warning-PINMISSING: ../01_tb/TB_I2C_MASTER.sv:33:7: Cell has missing pin: 'IO_I2C_SDA'
+   33 |     ) dut (
+      |       ^~~
+%Warning-PINMISSING: ../01_tb/TB_I2C_MASTER.sv:33:7: Cell has missing pin: 'O_CONFIG_DONE'
+   33 |     ) dut (
+      |       ^~~
+%Warning-PINMISSING: ../01_tb/TB_I2C_MASTER.sv:33:7: Cell has missing pin: 'O_I2C_NACK_ERROR'
+   33 |     ) dut (
+      |       ^~~
+%Error-PINNOTFOUND: ../01_tb/TB_I2C_MASTER.sv:34:10: Pin not found: 'clk'
+   34 |         .clk            (clk),
+      |          ^~~
+%Error-PINNOTFOUND: ../01_tb/TB_I2C_MASTER.sv:35:10: Pin not found: 'rst_n'
+   35 |         .rst_n          (rst_n),
+      |          ^~~~~
+%Error-PINNOTFOUND: ../01_tb/TB_I2C_MASTER.sv:36:10: Pin not found: 'i2c_scl'
+   36 |         .i2c_scl        (i2c_scl),
+      |          ^~~~~~~
+%Error-PINNOTFOUND: ../01_tb/TB_I2C_MASTER.sv:37:10: Pin not found: 'i2c_sda'
+   37 |         .i2c_sda        (i2c_sda),
+      |          ^~~~~~~
+%Error-PINNOTFOUND: ../01_tb/TB_I2C_MASTER.sv:38:10: Pin not found: 'config_done'
+   38 |         .config_done    (config_done),
+      |          ^~~~~~~~~~~
+%Error-PINNOTFOUND: ../01_tb/TB_I2C_MASTER.sv:39:10: Pin not found: 'i2c_nack_error'
+   39 |         .i2c_nack_error (i2c_nack_error)
+      |          ^~~~~~~~~~~~~~
+%Error-PINNOTFOUND: ../01_tb/TB_I2C_MASTER.sv:32:10: Parameter not found: 'NUM_REGS'
+   32 |         .NUM_REGS (NUM_REGS)
+      |          ^~~~~~~~
+%Error: Exiting due to 7 error(s)

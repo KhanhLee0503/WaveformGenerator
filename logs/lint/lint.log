@@ -1,0 +1,10 @@
+%Warning-WIDTHEXPAND: /mnt/c/SystemVerilog/Waveform_Generator/00_src/I2C_MASTER.sv:77:32: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'r_div_cnt' generates 7 bits.
+                                                                                        : ... note: In instance 'I2C_MASTER'
+   77 |         end else if (r_div_cnt == CLK_DIV-1) begin      
+      |                                ^~
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.020
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: /mnt/c/SystemVerilog/Waveform_Generator/00_src/I2C_MASTER.sv:85:37: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'r_div_cnt' generates 7 bits.
+                                                                                        : ... note: In instance 'I2C_MASTER'
+   85 |     assign w_tick_en   = (r_div_cnt == CLK_DIV-1);
+      |                                     ^~

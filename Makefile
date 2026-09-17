@@ -3,9 +3,9 @@ SHELL       := /bin/bash
 
 VERILATOR  			?= /usr/bin/verilator
 SURFER      			?= surfer
-TOP       			?= PHASE_ACCUMULATOR 
-SIM_TOP             		?= PHASE_ACCUMULATOR_TB
-SIM_TB              		?= 01_tb/PHASE_ACCUMULATOR_TB.sv
+TOP       			?= I2C_MASTER
+SIM_TOP             		?= TB_I2C_MASTER
+SIM_TB              		?= 01_tb/TB_I2C_MASTER.sv
 RUN_ARGS            		?=
 RTL_DIR   			:= 00_src
 FILE_LIST 			:= rtl.f

@@ -41,6 +41,7 @@ logic [31:0] r_phase_ftw;
 logic        r_phase_clear;
 logic [31:0] r_duty_cycle_th;
 logic [15:0] r_amplitude;
+logic 	     r_noise_inject_en;
 
 //Sine LUT ROM has synchronous read, so we need to delay the square, triangle, and sawtooth data by one clock cycle to align with the sine data
 logic [23:0] r_square_delay;
@@ -115,8 +116,8 @@ NEGATIVE_MULTIPLIER u_neg_mult(
 
 assign w_wave_data_output = w_wave_data[23] ? w_amplitude_negate : w_amplitude_scaled[23:0];
 
-assign O_WAVE_DATA = (I_NOISE_INJECT_EN) ? 
-                     (w_wave_data_output + {{16{w_prbs_data[7]}}, w_prbs_data[7:0]}) :
+assign O_WAVE_DATA = (r_noise_inject_en) ? 
+                     (w_wave_data_output + {{16{w_prbs_data[7]}}, w_prbs_data[7:0]}) : 	//Sign-Extension
                       w_wave_data_output;
 
 always_ff @(posedge I_CLK or negedge I_RESET_N) begin
@@ -138,6 +139,7 @@ always_ff @(posedge I_CLK or negedge I_RESET_N) begin
     r_duty_cycle_th   <= I_DUTY_CYCLE_TH;
     r_amplitude       <= I_AMPLITUDE;
     r_wave_select     <= I_WAVE_SELECT;
+    r_noise_inject_en <= I_NOISE_INJECT_EN;
     r_square_delay    <= w_square_data;
     r_triangle_delay  <= w_triangle_data;
     r_sawtooth_delay  <= w_sawtooth_data;

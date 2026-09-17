@@ -20,9 +20,9 @@ localparam DUTY_CYCLE_TH_MAX  = 32'hCCCC_CCCC; //80% duty cycle
 localparam DUTY_CYCLE_TH_STEP = 32'h0CCC_CCCD; //Increase 5% duty cycle per step
 
 //Control parameters for the phase frequency tracking word
-localparam PHASE_FTW_MIN      = 32'h000D_A741; //20Hz at 96kHz sample clock frequency
-localparam PHASE_FTW_MAX      = 32'h3555_5555; //20kHz at 96kHz sample clock frequency
-localparam PHASE_FTW_STEP     = 32'h0044_4444; //Increase 100Hz frequency per step 
+localparam PHASE_FTW_MIN      = 32'h0000_06B6; //20Hz at 96kHz sample clock frequency
+localparam PHASE_FTW_MAX      = 32'h001A_36E3; //20kHz at 96kHz sample clock frequency
+localparam PHASE_FTW_STEP     = 32'h0000_218E; //Increase 100Hz frequency per step 
 
 //Control parameters for the amplitude scaler
 localparam AMPLITUDE_MIN      = 16'h0;
