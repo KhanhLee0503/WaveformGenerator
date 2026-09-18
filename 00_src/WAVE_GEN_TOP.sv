@@ -49,4 +49,14 @@ WAVE_GEN u_wave_gen(
   .O_WAVE_DATA             (O_WAVE_DATA)
 );
 
+I2S_MASTER(
+    	     I_MCLK,
+           I_RESET_N,
+    	     I_START,
+           I_WAVE_DATA,
+
+    	     O_AUD_DACDAT,
+    	     O_AUD_DACLRCLK,
+           O_AUD_DACBCLK
+);
 endmodule: WAVE_GEN_TOP
